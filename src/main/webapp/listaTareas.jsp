@@ -5,9 +5,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <title>ToDoList - EITIE</title>
 </head>
 <body>
-	
+	<div class="container">
+		<div class="containerHead" >
+			ToDoList
+			
+		</div>
+		
+		<div class="containerBody">
+			<logic:iterate id="tarea" name="listaTareas">
+				<div class="tarea">
+					<div class="tituloTarea"><bean:write name="tarea" property="titulo"/></div>
+					<div class="descripcionTarea"><bean:write name="tarea" property="descripcion"/></div>
+				</div>
+			</logic:iterate>
+		</div>
+		
+		<div class="containerFoot">
+			<img alt="Logo EITIE" src="img/logo.png">
+		</div>
+	</div>
 </body>
 </html>

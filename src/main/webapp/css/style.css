@@ -1,0 +1,69 @@
+body {
+	background-image: url("../img/bg.jpg");
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #AAA;
+	border-radius: 10px;
+}
+
+.container {
+	width: 600px;
+	height: 700px;
+	margin: auto;
+	padding: 10px;
+	background: #FFE7CB;
+	border: 2px solid #FFDEB8;
+	border-radius: 15px;
+	box-shadow: 5px 5px 2px #BFA68A;
+}
+
+.containerHead {
+	color: #A67134;
+	text-align: center;
+	text-shadow: 1px 1px 1px #BFA68A;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 40px;
+	padding: 10 px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.containerFoot {
+	padding: 15px;
+	text-align: right;
+}
+
+.containerBody {
+	height: 600px;
+	overflow: auto;
+}
+
+.tarea {
+	margin: 10px;
+	padding: 10px;
+	background: #B1CEDD;
+	border: 2px solid #275E79;
+	border-radius: 5px;
+	box-shadow: 3px 3px 1px #A2C9D2;
+}
+
+.tituloTarea {
+	color: #275E79;
+	margin-bottom: 15px;
+}
+
+.descripcionTarea {
+	color: #667F8B;
+	text-align: justify;
+}
