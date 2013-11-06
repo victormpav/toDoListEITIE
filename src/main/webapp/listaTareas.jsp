@@ -11,8 +11,7 @@
 <body>
 	<div class="container">
 		<div class="containerHead" >
-			ToDoList
-			
+			ToDoList <img alt="nueva tarea" src="img/add.png">			
 		</div>
 		
 		<div class="containerBody">
@@ -20,6 +19,8 @@
 				<div class="tarea">
 					<div class="tituloTarea"><bean:write name="tarea" property="titulo"/></div>
 					<div class="descripcionTarea"><bean:write name="tarea" property="descripcion"/></div>
+					<img alt="nueva tarea" src="img/edit.png">
+					<img alt="borrar tarea" src="img/delete.png">
 				</div>
 			</logic:iterate>
 		</div>
