@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="logic" uri="http://struts.apache.org/tags-logic" %>
 <%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean" %>
+<%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,7 +21,7 @@
 					<div class="tituloTarea"><bean:write name="tarea" property="titulo"/></div>
 					<div class="descripcionTarea"><bean:write name="tarea" property="descripcion"/></div>
 					<img alt="nueva tarea" src="img/edit.png">
-					<img alt="borrar tarea" src="img/delete.png">
+					<html:link action="/borrarTarea" paramName="tarea" paramProperty="id" paramId="id"><img alt="borrar tarea" src="img/delete.png"></html:link>
 				</div>
 			</logic:iterate>
 		</div>

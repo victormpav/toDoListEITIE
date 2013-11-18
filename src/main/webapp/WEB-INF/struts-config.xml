@@ -6,5 +6,9 @@
 				type="eitie.toDoList.action.listaTareas" >
 				<forward name="success" path="/listaTareas.jsp"/>
 		</action>
+		<action path="/borrarTarea"
+				type="eitie.toDoList.action.BorrarTarea">
+				<forward name="success" path="/listaTareas.do" redirect="true"/>
+		</action>
 	</action-mappings>
 </struts-config> 
