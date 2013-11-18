@@ -7,9 +7,12 @@ import java.util.Collection;
 import eitie.toDoList.bean.Tarea;
 
 public class TareaDAO {
+	private static TareaDAO INSTANCE = new TareaDAO();
+	
 	private Tarea listadoTareas[]= new Tarea[20];
 	
-	public TareaDAO() {
+	
+	private TareaDAO() {
 		listadoTareas[0]= new Tarea();
 		listadoTareas[0].setId(0);
 		listadoTareas[0].setTitulo("Tarea 1");
@@ -29,6 +32,10 @@ public class TareaDAO {
 			
 	}
 	
+	public static TareaDAO getInstance(){
+		return INSTANCE;
+	}
+	
 	public Tarea getById (Integer id) {
 		return listadoTareas[id];
 	}
@@ -43,5 +50,9 @@ public class TareaDAO {
 		}
 		
 		return listado;
+	}
+	
+	public void borrar(Integer id){
+		listadoTareas[id]=null;
 	}
 }

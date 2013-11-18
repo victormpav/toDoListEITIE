@@ -15,7 +15,7 @@ public class listaTareas extends Action {
 			javax.servlet.http.HttpServletResponse response) throws Exception {
 	
 		
-		TareaDAO tareaDAO = new TareaDAO();
+		TareaDAO tareaDAO = TareaDAO.getInstance();
 		Collection<Tarea> listaTareas = tareaDAO.getAll();
 		
 		request.setAttribute("listaTareas", listaTareas);
