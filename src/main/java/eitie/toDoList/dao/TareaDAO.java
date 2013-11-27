@@ -52,6 +52,11 @@ public class TareaDAO {
 		return listado;
 	}
 	
+	/**
+	  * Borra un elemento de la lista de tareas.
+	  *
+	  * @param id de la tarea a borrar
+	  */
 	public void borrar(Integer id){
 		listadoTareas[id]=null;
 	}
