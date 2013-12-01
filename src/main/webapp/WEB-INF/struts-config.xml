@@ -3,10 +3,7 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="tareaForm" type="org.apache.struts.action.DynaActionForm">
-			<form-property name="titulo" type="java.lang.String" />
-			<form-property name="descripcion" type="java.lang.String" />
-		</form-bean>
+		<form-bean name="tareaForm" type="eitie.toDoList.form.TareaForm"/>
 	</form-beans>
 	
 	<action-mappings>
@@ -16,6 +13,20 @@
 		</action>
 		<action path="/crearTarea"
 				type="eitie.toDoList.action.CrearTarea"
+				name="tareaForm"
+				validate="false"
+				scope="request">
+				<forward name="success" path="/listaTareas.do" redirect="true"/>
+		</action>
+		<action path="/rellenarEdicionTarea"
+				type="eitie.toDoList.action.RellenarEdicionTarea"
+				name="tareaForm"
+				validate="false"
+				scope="request">
+				<forward name="success" path="/editarTarea.jsp"/>
+		</action>
+		<action path="/editarTarea"
+				type="eitie.toDoList.action.EditarTarea"
 				name="tareaForm"
 				validate="false"
 				scope="request">

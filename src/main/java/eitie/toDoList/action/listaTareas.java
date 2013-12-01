@@ -21,5 +21,5 @@ public class listaTareas extends Action {
 		request.setAttribute("listaTareas", listaTareas);
 		
 		return mapping.findForward("success");
-	};
+	}
 }

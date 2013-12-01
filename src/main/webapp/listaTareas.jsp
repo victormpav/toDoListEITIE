@@ -23,7 +23,7 @@
 				<div class="tarea">
 					<div class="tituloTarea"><bean:write name="tarea" property="titulo"/></div>
 					<div class="descripcionTarea"><bean:write name="tarea" property="descripcion"/></div>
-					<img alt="nueva tarea" src="img/edit.png">
+					<html:link action="/rellenarEdicionTarea" paramName="tarea" paramProperty="id" paramId="id"><img alt="editar tarea" src="img/edit.png"></html:link>
 					<html:link action="/borrarTarea" paramName="tarea" paramProperty="id" paramId="id"><img alt="borrar tarea" src="img/delete.png"></html:link>
 				</div>
 			</logic:iterate>

@@ -12,23 +12,24 @@ import eitie.toDoList.bean.Tarea;
 import eitie.toDoList.dao.TareaDAO;
 import eitie.toDoList.form.TareaForm;
 
-public class CrearTarea extends Action {
+public class RellenarEdicionTarea extends Action {
 
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		
-		TareaForm tareaForm = (TareaForm) form;
-		
-		Tarea tarea = new Tarea();
-		tarea.setTitulo(tareaForm.getTitulo());
-		tarea.setDescripcion(tareaForm.getDescripcion());
+		Integer tareaId = new Integer(request.getParameter("id"));
 		
 		TareaDAO tareaDAO = TareaDAO.getInstance();
-		tareaDAO.crear(tarea);
+		Tarea tarea = tareaDAO.getById(tareaId);
+		
+		TareaForm tareaForm = (TareaForm) form;
+		tareaForm.setId(tarea.getId());
+		tareaForm.setTitulo(tarea.getTitulo());
+		tareaForm.setDescripcion(tarea.getDescripcion());
 		
 		return mapping.findForward("success");
 		
 	}
-
+	
 }

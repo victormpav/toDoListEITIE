@@ -78,6 +78,18 @@ public class TareaDAO {
 	}
 	
 	/**
+	  * Actualiza una tarea en la lista
+	  *
+	  * @param tarea La tarea a actualizar
+	  */
+	public void actualizar(Tarea tarea) {
+		int index = listadoTareas.indexOf(tarea);
+		Tarea tareaOld = listadoTareas.get(index);
+		tareaOld.setTitulo(tarea.getTitulo());
+		tareaOld.setDescripcion(tarea.getDescripcion());
+	}
+	
+	/**
 	  * Borra un elemento de la lista de tareas
 	  *
 	  * @param id de la tarea a borrar

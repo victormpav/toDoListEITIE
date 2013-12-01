@@ -17,8 +17,9 @@
 			</html:link>
 		</div>
 		<div class="containerBody">
-			<html:form action="/crearTarea" focus="titulo">
+			<html:form action="/editarTarea" focus="titulo">
 				<div class="tarea">
+					<html:hidden property="id"/>
 					Título
 					<div class="tituloTarea"><html:text property="titulo"/></div>
 					Descripción

@@ -12,8 +12,8 @@ import eitie.toDoList.bean.Tarea;
 import eitie.toDoList.dao.TareaDAO;
 import eitie.toDoList.form.TareaForm;
 
-public class CrearTarea extends Action {
-
+public class EditarTarea extends Action {
+	
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
@@ -21,14 +21,15 @@ public class CrearTarea extends Action {
 		TareaForm tareaForm = (TareaForm) form;
 		
 		Tarea tarea = new Tarea();
+		tarea.setId(tareaForm.getId());
 		tarea.setTitulo(tareaForm.getTitulo());
 		tarea.setDescripcion(tareaForm.getDescripcion());
 		
 		TareaDAO tareaDAO = TareaDAO.getInstance();
-		tareaDAO.crear(tarea);
+		tareaDAO.actualizar(tarea);
 		
 		return mapping.findForward("success");
 		
 	}
-
+	
 }
