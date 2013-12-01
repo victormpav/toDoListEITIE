@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="logic" uri="http://struts.apache.org/tags-logic" %>
-<%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean" %>
 <%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,25 +12,26 @@
 	<div class="container">
 		<div class="containerHead" >
 			ToDoList
-			<html:link href="crearTarea.jsp">
-				<img alt="nueva tarea" src="img/add.png">
+			<html:link action="/listaTareas">
+				<img alt="atras" src="img/back.png">
 			</html:link>
 		</div>
-		
 		<div class="containerBody">
-			<logic:iterate id="tarea" name="listaTareas">
+			<html:form action="/crearTarea" focus="titulo">
 				<div class="tarea">
-					<div class="tituloTarea"><bean:write name="tarea" property="titulo"/></div>
-					<div class="descripcionTarea"><bean:write name="tarea" property="descripcion"/></div>
-					<img alt="nueva tarea" src="img/edit.png">
-					<html:link action="/borrarTarea" paramName="tarea" paramProperty="id" paramId="id"><img alt="borrar tarea" src="img/delete.png"></html:link>
+					Título
+					<div class="tituloTarea"><html:text property="titulo"/></div>
+					Descripción
+					<div class="descripcionTarea"><html:textarea property="descripcion"/></div>
+					<div><html:image alt="guardar tarea" src="img/save.png" ></html:image></div>
 				</div>
-			</logic:iterate>
+			</html:form>
 		</div>
 		
 		<div class="containerFoot">
 			<img alt="Logo EITIE" src="img/logo.png">
 		</div>
 	</div>
+
 </body>
 </html>

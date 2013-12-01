@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>     
-	<!DOCTYPE struts-config PUBLIC           "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"           "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
 <struts-config>
+
+	<form-beans>
+		<form-bean name="tareaForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="titulo" type="java.lang.String" />
+			<form-property name="descripcion" type="java.lang.String" />
+		</form-bean>
+	</form-beans>
+	
 	<action-mappings>
 		<action path="/listaTareas"
 				type="eitie.toDoList.action.listaTareas" >
 				<forward name="success" path="/listaTareas.jsp"/>
+		</action>
+		<action path="/crearTarea"
+				type="eitie.toDoList.action.CrearTarea"
+				name="tareaForm"
+				validate="false"
+				scope="request">
+				<forward name="success" path="/listaTareas.do" redirect="true"/>
 		</action>
 		<action path="/borrarTarea"
 				type="eitie.toDoList.action.BorrarTarea">
 				<forward name="success" path="/listaTareas.do" redirect="true"/>
 		</action>
 	</action-mappings>
+	
 </struts-config> 
