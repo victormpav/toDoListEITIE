@@ -16,10 +16,10 @@ public class BorrarTarea extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		
-		Integer tareaId = new Integer(request.getParameter("id"));
+		Integer TAREAID = new Integer(request.getParameter("id"));
 		
-		TareaDAO tareaDAO = TareaDAO.getInstance();
-		tareaDAO.borrar(tareaId);
+		TareaDAO TAREADO = TareaDAO.getInstance();
+		TAREADO.borrar(TAREAID);
 		
 		return mapping.findForward("success");
 	}

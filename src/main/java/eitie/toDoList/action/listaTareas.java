@@ -15,10 +15,10 @@ public class listaTareas extends Action {
 			javax.servlet.http.HttpServletResponse response) throws Exception {
 	
 		
-		TareaDAO tareaDAO = TareaDAO.getInstance();
-		Collection<Tarea> listaTareas = tareaDAO.getAll();
+		TareaDAO TAREADO = TareaDAO.getInstance();
+		Collection<Tarea> LISTATAREAS = TAREADO.getAll();
 		
-		request.setAttribute("listaTareas", listaTareas);
+		request.setAttribute("listaTareas", LISTATAREAS);
 		
 		return mapping.findForward("success");
 	}

@@ -6,32 +6,32 @@ public class TareaForm extends ActionForm {
 	
 	private static final long serialVersionUID = 3442846809513724379L;
 	
-	private int id;
-	private String titulo;
-	private String descripcion;
+	private int ID;
+	private String TITULO;
+	private String DESCRIPCION;
 	
 	public int getId() {
-		return id;
+		return ID;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int ID) {
+		this.ID = ID;
 	}
 
 	public String getTitulo() {
-		return titulo;
+		return TITULO;
 	}
 	
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setTitulo(String TITULO) {
+		this.TITULO = TITULO;
 	}
 	
 	public String getDescripcion() {
-		return descripcion;
+		return DESCRIPCION;
 	}
 	
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setDescripcion(String DESCRIPCION) {
+		this.DESCRIPCION = DESCRIPCION;
 	}	
 	
 }

@@ -18,15 +18,15 @@ public class EditarTarea extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		
-		TareaForm tareaForm = (TareaForm) form;
+		TareaForm TAREAFORM = (TareaForm) form;
 		
-		Tarea tarea = new Tarea();
-		tarea.setId(tareaForm.getId());
-		tarea.setTitulo(tareaForm.getTitulo());
-		tarea.setDescripcion(tareaForm.getDescripcion());
+		Tarea TAREA = new Tarea();
+		TAREA.setId(TAREAFORM.getId());
+		TAREA.setTitulo(TAREAFORM.getTitulo());
+		TAREA.setDescripcion(TAREAFORM.getDescripcion());
 		
-		TareaDAO tareaDAO = TareaDAO.getInstance();
-		tareaDAO.actualizar(tarea);
+		TareaDAO TAREADO = TareaDAO.getInstance();
+		TAREADO.actualizar(TAREA);
 		
 		return mapping.findForward("success");
 		
