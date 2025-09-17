@@ -2,52 +2,52 @@ package eitie.toDoList.bean;
 
 public class Tarea {
 	
-	int 	id;
-	String 	titulo;
-	String 	descripcion;
+	int 	ID;
+	String 	TITULO;
+	String 	DESCRIPCION;
 		
 	public int getId() {
-		return id;
+		return ID;
 	}
 	
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int ID) {
+		this.ID = ID;
 	}
 	
 	public String getTitulo() {
-		return titulo;
+		return TITULO;
 	}
 	
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setTitulo(String TITULO) {
+		this.TITULO = TITULO;
 	}
 	
 	public String getDescripcion() {
-		return descripcion;
+		return DESCRIPCION;
 	}
 	
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setDescripcion(String DESCRIPCION) {
+		this.DESCRIPCION = DESCRIPCION;
 	}
 	
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id;
-		return result;
+		final int PRIME = 31;
+		int RESULT = 1;
+		RESULT = PRIME * RESULT + ID;
+		return RESULT;
 	}
 	
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(Object OBJ) {
+		if (this == OBJ)
 			return true;
-		if (obj == null)
+		if (OBJ == null)
 			return false;
-		if (getClass() != obj.getClass())
+		if (getClass() != OBJ.getClass())
 			return false;
-		Tarea other = (Tarea) obj;
-		if (id != other.id)
+		Tarea OTHER = (Tarea) OBJ;
+		if (ID != OTHER.ID)
 			return false;
 		return true;
 	}

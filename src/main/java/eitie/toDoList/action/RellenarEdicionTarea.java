@@ -18,15 +18,15 @@ public class RellenarEdicionTarea extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		
-		Integer tareaId = new Integer(request.getParameter("id"));
+		Integer TAREAID = new Integer(request.getParameter("id"));
 		
-		TareaDAO tareaDAO = TareaDAO.getInstance();
-		Tarea tarea = tareaDAO.getById(tareaId);
+		TareaDAO TAREADO = TareaDAO.getInstance();
+		Tarea TAREA = TAREADO.getById(TAREAID);
 		
-		TareaForm tareaForm = (TareaForm) form;
-		tareaForm.setId(tarea.getId());
-		tareaForm.setTitulo(tarea.getTitulo());
-		tareaForm.setDescripcion(tarea.getDescripcion());
+		TareaForm TAREAFORM = (TareaForm) form;
+		TAREAFORM.setId(TAREA.getId());
+		TAREAFORM.setTitulo(TAREA.getTitulo());
+		TAREAFORM.setDescripcion(TAREA.getDescripcion());
 		
 		return mapping.findForward("success");
 		

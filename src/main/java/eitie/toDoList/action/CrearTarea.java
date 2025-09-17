@@ -18,14 +18,14 @@ public class CrearTarea extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		
-		TareaForm tareaForm = (TareaForm) form;
+		TareaForm TAREAFORM = (TareaForm) form;
 		
-		Tarea tarea = new Tarea();
-		tarea.setTitulo(tareaForm.getTitulo());
-		tarea.setDescripcion(tareaForm.getDescripcion());
+		Tarea TAREA = new Tarea();
+		TAREA.setTitulo(TAREAFORM.getTitulo());
+		TAREA.setDescripcion(TAREAFORM.getDescripcion());
 		
-		TareaDAO tareaDAO = TareaDAO.getInstance();
-		tareaDAO.crear(tarea);
+		TareaDAO TAREADO = TareaDAO.getInstance();
+		TAREADO.crear(TAREA);
 		
 		return mapping.findForward("success");
 		
